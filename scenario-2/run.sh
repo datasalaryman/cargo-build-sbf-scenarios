@@ -10,3 +10,4 @@ install_cargo_build_sbf "$MANUAL_CARGO_BUILD_SBF_VERSION"
 diagnostics "After manual cargo install"
 install_candidate_release
 diagnostics "Final state after candidate CLI update"
+build_anchor_program

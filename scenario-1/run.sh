@@ -10,3 +10,4 @@ install_solana_release "$OLD_SOLANA_VERSION"
 diagnostics "After old Solana CLI install"
 install_candidate_release
 diagnostics "Final state after candidate CLI update"
+build_anchor_program

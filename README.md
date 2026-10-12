@@ -51,7 +51,9 @@ git checkout a7c5efc84bdd645574185bc4b6efc3e0cd716851
 Each scenario runs as an unprivileged user in a clean Docker container. The logs
 show the `PATH` entries, every matching command on `PATH`, the selected and real
 binary paths, symlink details, and the versions reported by `solana`,
-`cargo-build-sbf`, and `cargo-test-sbf` after every installation step.
+`cargo-build-sbf`, and `cargo-test-sbf` after every installation step. Once the
+scenario reaches its final state, it also uses the selected `cargo-build-sbf`
+binary to build the minimal Anchor program in `programs/hello-solana`.
 
 PR #15415 does not have a published Agave release artifact. The candidate step
 therefore downloads its exact commit and runs `scripts/cargo-install-all.sh`

@@ -73,6 +73,14 @@ install_candidate_release() {
   hash -r
 }
 
+build_anchor_program() {
+  section "Building the Hello, Solana! Anchor program"
+  (
+    cd /workspace/programs/hello-solana
+    cargo build-sbf
+  )
+}
+
 show_command() {
   local command_name="$1"
   local resolved

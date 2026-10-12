@@ -16,5 +16,6 @@ RUN curl --proto '=https' --tlsv1.2 --fail --show-error --silent \
         https://sh.rustup.rs \
     | sh -s -- -y --default-toolchain 1.98.1
 COPY --chown=scenario:scenario scripts/common.sh /workspace/scripts/common.sh
+COPY --chown=scenario:scenario programs /workspace/programs
 COPY --chown=scenario:scenario scenario-3/run.sh /workspace/scenario-3/run.sh
 ENTRYPOINT ["/bin/bash", "--login", "/workspace/scenario-3/run.sh"]
